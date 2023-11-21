@@ -10,6 +10,7 @@ import { SostenibleComponent } from './pages/sostenible/sostenible.component';
 import { SocialComponent } from './pages/social/social.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { AgregarPlanesComponent } from './pages/agregar-planes/agregar-planes.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RegisterComponent } from './pages/register/register.component';
     SostenibleComponent,
     SocialComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AgregarPlanesComponent
   ],
   imports: [
     BrowserModule,

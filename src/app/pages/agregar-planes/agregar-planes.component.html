@@ -1,1 +1,39 @@
-<p>agregar-planes works!</p>
+<form
+  class="form form-auth form-login"
+  autocomplete="off"
+>
+  <h2>Agregar Planes</h2>
+
+  <div class="field">
+    <label for="name">Nombre del Plan</label>
+    <input
+      id="name"
+      class="input-field"
+      type="text"
+      name="name"
+      placeholder="Ingrese el nombre del plan"
+    />
+  </div>
+  <div class="field">
+    <label for="description">Descripción</label>
+    <input
+      id="description"
+      class="input-field"
+      type="text"
+      name="description"
+      placeholder="Ingrese la descripción del plan"
+    />
+  </div>
+  <div class="field">
+    <button
+      class="btn btn-primary"
+      type="submit"
+    >Agregar</button>
+  </div>
+
+  <div class="errors">
+    <h3 class="title-errors">Errors</h3>
+    <!-- <pre class="error">{{ loginForm.get( 'email' )?.errors | json }}</pre>
+    <pre class="error">{{ loginForm.get( 'password' )?.errors | json }}</pre> -->
+  </div>
+</form>

@@ -1,5 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
 .form-auth,
 .form-product {
   max-width: 50%;
@@ -74,4 +75,11 @@ button.btn {
   border: 1px solid green;
   color: green;
   background-color: limegreen;
+}
+
+.img-banner {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }

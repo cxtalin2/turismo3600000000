@@ -16,7 +16,7 @@ main {
 
 .actividades-turismo-social1 {
     background-color: #e8e6e1;
-    /* background-image: url( '../assets/images/tejido-diagonal-1.png' ); */
+    background-image: url(/src/assets/images/tejido-diagonal-1.png);
     margin: 3rem;
     border-radius: 1rem;
     height: 15rem;

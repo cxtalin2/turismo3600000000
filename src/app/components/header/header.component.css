@@ -1,3 +1,18 @@
+.container {
+    background-color: white;
+    padding-bottom: 3rem !important;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    font-size: larger;
+}
+.container1y2 {
+    display: flex;
+}
+.palito {
+    margin: 0 1rem 0 1rem;
+}
+
 .logo {
     width: 125px;
 }

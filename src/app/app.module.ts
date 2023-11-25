@@ -13,6 +13,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { AgregarPlanesComponent } from './pages/agregar-planes/agregar-planes.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BookingComponent } from './pages/booking/booking.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     SocialComponent,
     LoginComponent,
     RegisterComponent,
-    AgregarPlanesComponent
+    AgregarPlanesComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,

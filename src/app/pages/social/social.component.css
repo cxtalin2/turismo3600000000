@@ -10,6 +10,15 @@
 h2 {
     font-size: xxx-large;
 }
+h5.mb-2 {
+    color: black;
+}
+h5.text-truncate {
+    color: black;
+}
+a.h5.m-0.text-decoration-none {
+    color: black;
+}
 
 /* 
 html {

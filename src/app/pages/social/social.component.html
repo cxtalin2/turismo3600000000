@@ -1,5 +1,4 @@
-
-<!-- About Start -->
+<!-- <pre>{{planes | json}}</pre> -->
 <div class="container-fluid py-5">
     <div class="titulo-principal">
         <h2>Turismo social y sostenible: de nuestra comunidad para el mundo.</h2>
@@ -41,57 +40,17 @@
             <h1>Nuestros destinos</h1>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div 
+                class="col-lg-4 col-md-6 mb-4"
+                *ngFor="let plan of planes"
+                
+            >
                 <div class="destination-item position-relative overflow-hidden mb-2">
-                    <img class="img-fluid" src="assets/images/tejido-diagonal-2.png" alt="">
-                    <a class="destination-overlay text-white text-decoration-none" href="">
-                        <h5 class="text-white">Bogotá</h5>
-                        <span>Lugares</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="destination-item position-relative overflow-hidden mb-2">
-                    <img class="img-fluid" src="assets/images/tejido-diagonal-2.png" alt="">
-                    <a class="destination-overlay text-white text-decoration-none" href="">
-                        <h5 class="text-white">Bogotá</h5>
-                        <span>Lugares</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="destination-item position-relative overflow-hidden mb-2">
-                    <img class="img-fluid" src="assets/images/tejido-diagonal-2.png" alt="">
-                    <a class="destination-overlay text-white text-decoration-none" href="">
-                        <h5 class="text-white">Bogotá</h5>
-                        <span>Lugares</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="destination-item position-relative overflow-hidden mb-2">
-                    <img class="img-fluid" src="assets/images/tejido-diagonal-2.png" alt="">
-                    <a class="destination-overlay text-white text-decoration-none" href="">
-                        <h5 class="text-white">Bogotá</h5>
-                        <span>Lugares</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="destination-item position-relative overflow-hidden mb-2">
-                    <img class="img-fluid" src="assets/images/tejido-diagonal-2.png" alt="">
-                    <a class="destination-overlay text-white text-decoration-none" href="">
-                        <h5 class="text-white">Bogotá</h5>
-                        <span>Lugares</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="destination-item position-relative overflow-hidden mb-2">
-                    <img class="img-fluid" src="assets/images/tejido-diagonal-2.png" alt="">
-                    <a class="destination-overlay text-white text-decoration-none" href="">
-                        <h5 class="text-white">Bogotá</h5>
-                        <span>Lugares</span>
+                    <img class="img-fluid" [src]="plan.urlImage" alt="">
+                    <a class="destination-overlay text-white text-decoration-none">
+
+                        <h5 class="text-white">{{plan.location}}</h5>
+                        <span>{{plan.name}}</span>
                     </a>
                 </div>
             </div>

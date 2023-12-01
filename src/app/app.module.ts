@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BookingComponent } from './pages/booking/booking.component';
 import { DetallePlanComponent } from './pages/detalle-plan/detalle-plan.component';
+import { UpdatePlanComponent } from './pages/update-plan/update-plan.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DetallePlanComponent } from './pages/detalle-plan/detalle-plan.componen
     RegisterComponent,
     AgregarPlanesComponent,
     BookingComponent,
-    DetallePlanComponent
+    DetallePlanComponent,
+    UpdatePlanComponent
   ],
   imports: [
     BrowserModule,

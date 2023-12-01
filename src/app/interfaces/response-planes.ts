@@ -1,6 +1,6 @@
-import { Planes } from "./planes";
+import { Plan } from "./planes";
 
 export interface ResponsePlanes {
     ok: boolean;
-    data: Planes[]
+    data: Plan[]
 }

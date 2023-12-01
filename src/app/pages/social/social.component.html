@@ -47,11 +47,11 @@
             >
                 <div class="destination-item position-relative overflow-hidden mb-2">
                     <img class="img-fluid" [src]="plan.urlImage" alt="">
-                    <a class="destination-overlay text-white text-decoration-none">
+                    <a class="destination-overlay text-white text-decoration-none" (click) = "irAlDetalleDelPlan( plan )">
 
                         <h5 class="text-white">{{plan.location}}</h5>
                         <span>{{plan.name}}</span>
-                    </a>
+                   </a> 
                 </div>
             </div>
         </div>

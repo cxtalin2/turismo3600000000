@@ -7,6 +7,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { AgregarPlanesComponent } from './pages/agregar-planes/agregar-planes.component';
 import { DetallePlanComponent } from './pages/detalle-plan/detalle-plan.component';
 import { verifyAuthGuard } from './guards/verify-auth.guard';
+import { ListarPlanesComponent } from './pages/listar-planes/listar-planes.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
   { canActivate: [ verifyAuthGuard ], path: 'plan-agregar', component: AgregarPlanesComponent},
+  { canActivate: [ verifyAuthGuard ], path: 'listar-planes', component: ListarPlanesComponent},
   { path: '**', redirectTo: ''}
 ];
 

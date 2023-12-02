@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { PlanesService } from 'src/app/service/planes.service';
 
 @Component({
   selector: 'app-agregar-planes',
@@ -14,19 +16,23 @@ export class AgregarPlanesComponent {
   }]
 
   planesForm: FormGroup = this.fb.group({
-    name: [''],
+    name: ['', [Validators.required]],
     description: [''],
     location: ['Bogota'],
-    price: [''],
+    price: ['', [Validators.required]],
     category: [''],
     urlImage: ['']
   })
 
-  constructor( private fb: FormBuilder ) {}
+  constructor( private fb: FormBuilder, private planesService: PlanesService, private router: Router) {}
 
   agregarPlanes() {
     console.log( this.planesForm.value );
-    
+    this.planesService.crearPlan( this.planesForm.value ).subscribe(( data ) => {
+      console.log( data );
+      this.planesForm.reset()
+      this.router.navigateByUrl('/listar-planes')
+    })
   }
 }
 // name: 

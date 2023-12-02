@@ -1,6 +1,6 @@
 <form
   [formGroup]="planesForm"
-  (click)="agregarPlanes()"
+  (ngSubmit)="agregarPlanes()"
   class="form form-auth form-login"
   autocomplete="off"
 >
@@ -67,6 +67,7 @@
     <button
       class="btn btn-primary"
       type="submit"
+      [disabled]="planesForm.invalid"
     >Agregar</button>
   </div>
 

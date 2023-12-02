@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
 
 
@@ -19,7 +20,8 @@ export class LoginComponent {
 
   constructor( 
     private formBuilder: FormBuilder,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) {}
 
   login() {
@@ -38,6 +40,7 @@ export class LoginComponent {
       setTimeout( () => {
         this.classMessage = '';
         this.message = '';
+        this.router.navigateByUrl('plan-agregar')
       }, 2000 );
       
     });

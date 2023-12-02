@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'plan/:id', component: DetallePlanComponent},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
-  { canActivate: [ verifyAuthGuard ], path: 'agregar', component: AgregarPlanesComponent},
+  { canActivate: [ verifyAuthGuard ], path: 'plan-agregar', component: AgregarPlanesComponent},
   { path: '**', redirectTo: ''}
 ];
 

@@ -1,4 +1,6 @@
 <form
+  [formGroup]="planesForm"
+  (click)="agregarPlanes()"
   class="form form-auth form-login"
   autocomplete="off"
 >
@@ -10,7 +12,7 @@
       id="name"
       class="input-field"
       type="text"
-      name="name"
+      formControlName="name"
       placeholder="Ingrese el nombre del plan"
     />
   </div>
@@ -20,8 +22,45 @@
       id="description"
       class="input-field"
       type="text"
-      name="description"
+      formControlName="description"
       placeholder="Ingrese la descripción del plan"
+    />
+  </div>
+  <div class="field">
+    <label for="location">Ubicación</label>
+    <input
+      id="location"
+      class="input-field"
+      type="text"
+      formControlName="location"
+      placeholder="Ingrese el lugar"
+    />
+  </div>
+  <div class="field">
+    <label for="price">Precio</label>
+    <input
+      id="price"
+      class="input-field"
+      type="text"
+      formControlName="price"
+      placeholder="Ingrese el precio"
+    />
+  </div>
+  <div class="field">
+    <label for="category">Categoría</label>
+    <select formControlName="category" id="category" class="input-field">
+      <option value="" selected> Seleccione... </option>
+      <option [value]="category.value" *ngFor="let category of categories">{{ category.name }}</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="imagen">Imagen</label>
+    <input
+      id="imagen"
+      class="input-field"
+      type="text"
+      formControlName="urlImage"
+      placeholder="Ingrese URL de imagen"
     />
   </div>
   <div class="field">

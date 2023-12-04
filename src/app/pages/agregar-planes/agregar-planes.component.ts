@@ -18,7 +18,7 @@ export class AgregarPlanesComponent {
   planesForm: FormGroup = this.fb.group({
     name: ['', [Validators.required]],
     description: [''],
-    location: ['Bogota'],
+    location: ['Bogotá'],
     price: ['', [Validators.required]],
     category: [''],
     urlImage: ['']

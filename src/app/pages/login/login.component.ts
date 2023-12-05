@@ -40,7 +40,7 @@ export class LoginComponent {
       setTimeout( () => {
         this.classMessage = '';
         this.message = '';
-        this.router.navigateByUrl('plan-agregar')
+        
       }, 2000 );
       
     });

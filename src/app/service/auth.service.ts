@@ -48,7 +48,7 @@ export class AuthService {
           localStorage.setItem( 'token', response.token! );
 
           // this.router.navigateByUrl( '/dashboard' );
-          this.router.navigate( [ 'dashboard' ] );
+          this.router.navigate( [ 'listar-planes' ] );
         }),
         map( ( response: ResponseAuth ) => response.ok ),
         catchError( error => {

@@ -55,7 +55,7 @@ body {
 
 button.btn {
   width: 40%;
-  margin: 0 auto;
+  margin: 33px auto;
   padding: 0.4rem;
 }
 
@@ -264,6 +264,15 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+p.registro {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: snow;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 600;
 }
 
 abbr[title],
@@ -7765,7 +7774,7 @@ button.bg-dark:focus {
 }
 
 .p-5 {
-  padding: 3rem !important;
+  padding: 1rem !important;
 }
 
 .pt-5,
@@ -9817,7 +9826,7 @@ h6,
 }
 
 .bg-registration {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/images/tejido-diagonal-2.png), no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/images/bogota.jpg), no-repeat center center;
   background-size: cover;
 }
 

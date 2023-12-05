@@ -1,1 +1,26 @@
-<p>listar-planes works!</p>
+<!-- <pre>{{ planes | json }}</pre> -->
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Tipo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = "let plan of planes; index as i">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{plan.name}}</td>
+              <td>{{plan.price}}</td>
+              <td>{{plan.type}}</td>
+              <td>
+                <a href="#" class="btn btn-light">Editar</a>
+                <a href="#" class="btn btn-success">Eliminar</a>
+              </td>
+            </tr>
+            
+          </tbody>
+    </table>
+  </div>

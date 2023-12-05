@@ -1,5 +1,7 @@
 <!-- <pre>{{ planes | json }}</pre> -->
-<div class="table-responsive">
+<div class="container">
+    <app-header-admin></app-header-admin>
+    <div class="table-responsive">
     <table class="table">
         <thead>
             <tr>
@@ -16,11 +18,11 @@
               <td>{{plan.price}}</td>
               <td>{{plan.type}}</td>
               <td>
-                <a href="#" class="btn btn-light">Editar</a>
-                <a href="#" class="btn btn-success">Eliminar</a>
+                <a href="#" class="btn btn-light"> <i class="bi bi-pencil-square"></i> Editar</a>
+                <a href="#" class="btn btn-success"> <i class="bi bi-trash3-fill"></i> Eliminar</a>
               </td>
             </tr>
-            
           </tbody>
     </table>
   </div>
+</div>

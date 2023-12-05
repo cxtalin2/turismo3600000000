@@ -1,30 +1,28 @@
-<div>
-    <nav class=" navbar-expand-md navbar-light bg-success">
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                Planes
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Todos los planes</a>
-                <a class="dropdown-item" href="#">Crear plan</a>
-                
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">Logout</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
+<div class="">
+    <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg">
+            <a href="" class="navbar-brand">
+                <img class="logo-admin" src="assets/images/TURISMO360.png" alt="logo">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                <div class="navbar-nav ml-auto py-0">
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Planes</a>
+                        <div class="dropdown-menu border-0 rounded-0 m-0">
+                            <a routerLink = "/listar-planes"  class="dropdown-item">Todos los planes</a>
+                            <a routerLink = "/crear-plan"  class="dropdown-item">Crear Plan</a>
+                            
+                        </div>
+                        
+                    </div>
+                   
+                    <a href="contact.html" class="nav-item nav-link">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 </div>

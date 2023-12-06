@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Plan } from 'src/app/interfaces/planes';
 import { PlanesService } from 'src/app/service/planes.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-listar-planes',
@@ -19,11 +20,32 @@ export class ListarPlanesComponent {
     this.planes = data.data;
   })}
   eliminar(id: string) {
-    this.planesService.eliminarPlan(id).subscribe((data) => {
-      console.log(data);
-      this.cargarDatos()
-    })
+
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success"
+        });
+        this.planesService.eliminarPlan(id).subscribe((data) => {
+          console.log(data);
+          this.cargarDatos()      
+        })
+      }
+    });
+   
   }
-  editar(id: string) {console.log(id);
+  editar(id: string) {
+
   }
 }

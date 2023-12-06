@@ -44,4 +44,6 @@ export class PlanesService {
   eliminarPlan( id: string ) {
     return this.http.delete(this.BASE_URL+'/planes/' + id, { headers: this.headers })
   }
+
+  editarPlan() {}
 }

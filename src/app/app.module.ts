@@ -14,9 +14,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BookingComponent } from './pages/booking/booking.component';
 import { DetallePlanComponent } from './pages/detalle-plan/detalle-plan.component';
-import { UpdatePlanComponent } from './pages/update-plan/update-plan.component';
 import { ListarPlanesComponent } from './pages/listar-planes/listar-planes.component';
 import { HeaderAdminComponent } from './components/header-admin/header-admin.component';
+import { ActualizarPlanComponent } from './pages/actualizar-plan/actualizar-plan.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +31,9 @@ import { HeaderAdminComponent } from './components/header-admin/header-admin.com
     AgregarPlanesComponent,
     BookingComponent,
     DetallePlanComponent,
-    UpdatePlanComponent,
     ListarPlanesComponent,
-    HeaderAdminComponent
+    HeaderAdminComponent,
+    ActualizarPlanComponent
   ],
   imports: [
     BrowserModule,

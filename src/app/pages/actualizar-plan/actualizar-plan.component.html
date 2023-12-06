@@ -1,0 +1,80 @@
+<app-header-admin></app-header-admin>
+<form
+  [formGroup]="planesForm"
+  (ngSubmit)="actualizarPlanes()"
+  class="form form-auth form-login"
+  autocomplete="off"
+>
+  <h2>Actualizar Plan</h2>
+
+  <div class="field">
+    <label for="name">Nombre del Plan</label>
+    <input
+      id="name"
+      class="input-field"
+      type="text"
+      formControlName="name"
+      placeholder="Ingrese el nombre del plan"
+    />
+  </div>
+  <div class="field">
+    <label for="description">Descripción</label>
+    <input
+      id="description"
+      class="input-field"
+      type="text"
+      formControlName="description"
+      placeholder="Ingrese la descripción del plan"
+    />
+  </div>
+  <div class="field">
+    <label for="location">Ubicación</label>
+    <input
+      id="location"
+      class="input-field"
+      type="text"
+      formControlName="location"
+      placeholder="Ingrese el lugar"
+    />
+  </div>
+  <div class="field">
+    <label for="price">Precio</label>
+    <input
+      id="price"
+      class="input-field"
+      type="text"
+      formControlName="price"
+      placeholder="Ingrese el precio"
+    />
+  </div>
+  <div class="field">
+    <label for="category">Categoría</label>
+    <select formControlName="category" id="category" class="input-field">
+      <option value="" selected> Seleccione... </option>
+      <option [value]="category.value" *ngFor="let category of categories">{{ category.name }}</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="imagen">Imagen</label>
+    <input
+      id="imagen"
+      class="input-field"
+      type="text"
+      formControlName="urlImage"
+      placeholder="Ingrese URL de imagen"
+    />
+  </div>
+  <div class="field">
+    <button
+      class="btn btn-primary"
+      type="submit"
+      [disabled]="planesForm.invalid"
+    >Actualizar</button>
+  </div>
+
+  <div class="errors">
+    <h3 class="title-errors">Errors</h3>
+    <!-- <pre class="error">{{ loginForm.get( 'email' )?.errors | json }}</pre>
+    <pre class="error">{{ loginForm.get( 'password' )?.errors | json }}</pre> -->
+  </div>
+</form>

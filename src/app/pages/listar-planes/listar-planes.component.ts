@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Plan } from 'src/app/interfaces/planes';
 import { PlanesService } from 'src/app/service/planes.service';
 import Swal from 'sweetalert2';
@@ -10,7 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class ListarPlanesComponent {
   planes!: Plan[]
-  constructor( private planesService: PlanesService ) {}
+  constructor( private planesService: PlanesService, private router: Router ) {}
   ngOnInit() {
     this.cargarDatos()
   }
@@ -46,6 +47,6 @@ export class ListarPlanesComponent {
    
   }
   editar(id: string) {
-
+    this.router.navigate(["actualizar-plan", id])
   }
 }

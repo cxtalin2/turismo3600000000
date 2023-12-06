@@ -40,4 +40,8 @@ export class PlanesService {
   crearPlan( nuevoPlan: Plan ) {
     return this.http.post(this.BASE_URL+'/planes', nuevoPlan, { headers: this.headers })
   }
+
+  eliminarPlan( id: string ) {
+    return this.http.delete(this.BASE_URL+'/planes/' + id, { headers: this.headers })
+  }
 }

@@ -11,9 +11,19 @@ export class ListarPlanesComponent {
   planes!: Plan[]
   constructor( private planesService: PlanesService ) {}
   ngOnInit() {
+    this.cargarDatos()
+  }
+  cargarDatos() {
     this.planesService.obtenerPlanes().subscribe(( data ) => { 
+    console.log(data);
+    this.planes = data.data;
+  })}
+  eliminar(id: string) {
+    this.planesService.eliminarPlan(id).subscribe((data) => {
       console.log(data);
-      this.planes = data.data;
+      this.cargarDatos()
     })
+  }
+  editar(id: string) {console.log(id);
   }
 }

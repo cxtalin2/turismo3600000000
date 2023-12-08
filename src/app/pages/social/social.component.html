@@ -118,16 +118,16 @@
                         <h1 class="text-white m-0">Reserva ahora</h1>
                     </div>
                     <div class="card-body rounded-bottom bg-white p-5">
-                        <form>
+                        <form [formGroup]="reservasForm" (ngSubmit)="onSubmit()">
                             <div class="form-group">
-                                <input type="text" class="form-control p-4" placeholder="Your name" required="required" />
+                                <input type="text" class="form-control p-4" placeholder="Your name" required="required" formControlName="name" />
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control p-4" placeholder="Your email" required="required" />
+                                <input type="email" class="form-control p-4" placeholder="Your email" required="required" formControlName="email" />
                             </div>
                             <div class="form-group">
-                                <select class="custom-select px-4" style="height: 47px;">
-                                    <option selected>Selecciona un plan:</option>
+                                <select class="custom-select px-4" style="height: 47px;" formControlName="plan" >
+                                    <option selected value="">Selecciona un plan:</option>
                                     <option value="1">Tour Bogotá + Cerro Monserrate</option>
                                     <option value="2">Graffiti Tour y Plaza de Paloquemao</option>
                                     <option value="3">Tour en Bicicleta en La Candelaria</option>
@@ -137,10 +137,11 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="date" class="form-control p-4" placeholder="Elige fecha" required="required" />
+                                <input type="date" class="form-control p-4" placeholder="Elige fecha" required="required" formControlName="date" />
                             </div>
-                            <select class="custom-select px-4" style="height: 47px;">
-                                <option selected>Número de personas</option>
+                            <div class="form-group">
+                            <select class="custom-select px-4" style="height: 47px;" formControlName="quantity">
+                                <option selected value="">Número de personas</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -149,6 +150,7 @@
                                 <option value="6">Más de 6</option>
                                 <option value="7">Me gustaría un tour privado</option>
                             </select>
+                            </div>
                                 <button class="btn btn-primary btn-block py-3" type="submit">Reservar</button>
                             
                         </form>

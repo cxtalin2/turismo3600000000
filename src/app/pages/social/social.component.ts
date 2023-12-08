@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Plan } from 'src/app/interfaces/planes';
 import { PlanesService } from 'src/app/service/planes.service';
+import { ReservasService } from 'src/app/service/reservas.service';
 
 @Component({
   selector: 'app-social',
@@ -11,7 +13,15 @@ import { PlanesService } from 'src/app/service/planes.service';
 export class SocialComponent implements OnInit {
   planes!: Plan[];
 
-  constructor(private planesService: PlanesService, private router: Router) {}
+  reservasForm: FormGroup = this.fb.group({
+    name: ['', []],
+    email: [''],
+    plan: [''],
+    date: [''], 
+    quantity: ['']
+  })
+
+  constructor(private planesService: PlanesService, private router: Router, private fb: FormBuilder, private reservasService: ReservasService) {}
 
   ngOnInit() {
     this.planesService.obtenerPlanes().subscribe((data) => {
@@ -27,4 +37,14 @@ export class SocialComponent implements OnInit {
   irAlDetalleDelPlan(plan: Plan) {
     this.router.navigateByUrl(`/plan/${plan._id}`);
   }
+
+  onSubmit() {
+    console.log(this.reservasForm.value);
+    this.reservasService.crearReserva(this.reservasForm.value).subscribe((data) => {
+      console.log(data);
+      this.reservasForm.reset()
+    })
+  }
+
+  
 }

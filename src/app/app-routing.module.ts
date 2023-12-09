@@ -9,6 +9,7 @@ import { DetallePlanComponent } from './pages/detalle-plan/detalle-plan.componen
 import { verifyAuthGuard } from './guards/verify-auth.guard';
 import { ListarPlanesComponent } from './pages/listar-planes/listar-planes.component';
 import { ActualizarPlanComponent } from './pages/actualizar-plan/actualizar-plan.component';
+import { ListarReservasComponent } from './pages/listar-reservas/listar-reservas.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { canActivate: [ verifyAuthGuard ], path: 'crear-plan', component: AgregarPlanesComponent},
   { canActivate: [ verifyAuthGuard ], path: 'listar-planes', component: ListarPlanesComponent},
   { canActivate: [ verifyAuthGuard ], path: 'actualizar-plan/:id', component: ActualizarPlanComponent},
+  { canActivate: [ verifyAuthGuard ], path: 'listar-reservas', component: ListarReservasComponent },
   { path: '**', redirectTo: ''}
 ];
 

@@ -17,6 +17,7 @@ import { DetallePlanComponent } from './pages/detalle-plan/detalle-plan.componen
 import { ListarPlanesComponent } from './pages/listar-planes/listar-planes.component';
 import { HeaderAdminComponent } from './components/header-admin/header-admin.component';
 import { ActualizarPlanComponent } from './pages/actualizar-plan/actualizar-plan.component';
+import { ListarReservasComponent } from './pages/listar-reservas/listar-reservas.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ActualizarPlanComponent } from './pages/actualizar-plan/actualizar-plan
     DetallePlanComponent,
     ListarPlanesComponent,
     HeaderAdminComponent,
-    ActualizarPlanComponent
+    ActualizarPlanComponent,
+    ListarReservasComponent
   ],
   imports: [
     BrowserModule,

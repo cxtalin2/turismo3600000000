@@ -64,18 +64,18 @@ export class ActualizarPlanComponent {
     console.log( this.planesForm.value );
 
     Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
+      title: "¿Estás seguro?",
+      text: "Esta acción no se puede deshacer.",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, updated it!"
+      confirmButtonText: "¡Sí, actualízalo!"
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
-          title: "Updated!",
-          text: "Your file has been updated.",
+          title: "¡Actualizado!",
+          text: "Tu plan ha sido actualizado.",
           icon: "success"
         });
         this.planesService.actualizarPlan( this.planId, this.planesForm.value ).subscribe(( data ) => {

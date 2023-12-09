@@ -126,15 +126,11 @@
                                 <input type="email" class="form-control p-4" placeholder="Your email" required="required" formControlName="email" />
                             </div>
                             <div class="form-group">
-                                <select class="custom-select px-4" style="height: 47px;" formControlName="plan" >
+                                <select class="custom-select px-4" style="height: 47px;" formControlName="plan">
                                     <option selected value="">Selecciona un plan:</option>
-                                    <option value="1">Tour Bogotá + Cerro Monserrate</option>
-                                    <option value="2">Graffiti Tour y Plaza de Paloquemao</option>
-                                    <option value="3">Tour en Bicicleta en La Candelaria</option>
-                                    <option value="4">Visita guiada al Museo del Oro de Bogotá</option>
-                                    <option value="5">Tejiendo Paz: Saborea y entiende lo que pasa en Colombia</option>
-                                    <option value="6">Tour del Conflicto Armado Colombiano: guerra, narcotráfico y paz</option>
-                                </select>
+                                    <option *ngFor="let plan of planes" [value]="plan.name">{{plan.name}}</option>
+                                  </select>
+                                  
                             </div>
                             <div class="form-group">
                                 <input type="date" class="form-control p-4" placeholder="Elige fecha" required="required" formControlName="date" />

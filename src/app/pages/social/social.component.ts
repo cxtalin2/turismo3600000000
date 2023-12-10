@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Plan } from 'src/app/interfaces/planes';
 import { PlanesService } from 'src/app/service/planes.service';
 import { ReservasService } from 'src/app/service/reservas.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-social',
@@ -45,6 +46,13 @@ export class SocialComponent implements OnInit {
       console.log(data);
       this.reservasForm.reset()
     })
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "¡Tu reserva ha sido registrada!",
+      showConfirmButton: false,
+      timer: 1500
+    });
   }
 
   

@@ -18,7 +18,8 @@ export class SocialComponent implements OnInit {
     email: [''],
     plan: [''],
     date: [''], 
-    quantity: ['']
+    quantity: [''],
+    notes: ['']
   })
 
   constructor(private planesService: PlanesService, private router: Router, private fb: FormBuilder, private reservasService: ReservasService) {}

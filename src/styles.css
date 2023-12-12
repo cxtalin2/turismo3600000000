@@ -6065,7 +6065,16 @@ img.carrusel {
 }
 video {
   width: 100%;
+  position: relative;
+  top: -3rem;
 }
+
+@media (min-width){
+  video{
+    top: -2.6rem;
+  }
+}
+
 
 .carousel-item.active,
 .carousel-item-next,

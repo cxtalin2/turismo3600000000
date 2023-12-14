@@ -1,0 +1,11 @@
+.imagen-monserrate {
+    width: 24rem;
+    margin: 0 2rem 0 0;
+}
+
+.cuadro-monserrate {
+    display: flex;
+    align-items: left;
+    margin: 0 10rem 0 10rem;
+    padding: 4rem;
+}

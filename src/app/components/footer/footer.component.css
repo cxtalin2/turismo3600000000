@@ -1,0 +1,19 @@
+.footer-turismo360 {
+    background-color: white;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.display-footer-turismo360 {
+    text-align: center;
+}
+.slogan-turismo360 {
+    color: black;
+    font-size: 25px;
+}
+
+.titulo-footer-turismo360 {
+    color: black;
+}

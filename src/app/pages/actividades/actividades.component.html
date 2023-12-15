@@ -47,6 +47,7 @@
                 <textarea formControlName="notes" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Notas"></textarea>
             </div>
             <div class="form-group">
+
                 total{{ total | currency: "COP": "symbol"}}
             </div>
                 <button class="btn btn-primary btn-block py-3" type="submit">Reservar</button>
@@ -68,6 +69,22 @@
         <p class="descripcion-monserrate">
             {{plan?.description}}
         </p>
+        <div class="carrusel">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/images/bogota.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/images/monserrate.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/images/graffiti.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+              </div>
+        </div>
+
 
 
     </div>
@@ -75,6 +92,9 @@
 
 
 </div>
+
+
+
 
 
 

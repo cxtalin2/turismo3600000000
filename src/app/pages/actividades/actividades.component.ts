@@ -26,7 +26,8 @@ export class ActividadesComponent {
     plan: [''],
     date: [''], 
     quantity: [''],
-    notes: ['']
+    notes: [''],
+    total: [ 0 ]
   })
 
   constructor(private planesService: PlanesService, private router: Router, private fb: FormBuilder, private reservasService: ReservasService) {}
@@ -60,6 +61,17 @@ export class ActividadesComponent {
       timer: 1500
     });
   }
-
+  calculaTotal() {
+    this.total = this.reservasForm.get("quantity")?.value * this.plan?.price!; 
+    this.reservasForm.setValue({
+      name: this.reservasForm.get("name")?.value,
+      email: this.reservasForm.get("email")?.value,
+      plan: this.reservasForm.get("plan")?.value,
+      date: this.reservasForm.get("date")?.value, 
+      quantity: this.reservasForm.get("quantity")?.value,
+      notes: this.reservasForm.get("notes")?.value,
+      total: this.total
+    })
+  }
 
 }

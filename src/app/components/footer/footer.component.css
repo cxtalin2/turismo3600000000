@@ -1,17 +1,38 @@
 .footer-turismo360 {
     background-color: white;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 .display-footer-turismo360 {
     text-align: center;
+    margin: 0 10rem 0 0;
 }
+.display1-footer-turismo360 {
+    text-align: center;
+    margin: 0 10rem 0 0;
+}
+.display2-footer-turismo360 {
+    text-align: center;
+}
+
 .slogan-turismo360 {
     color: black;
     font-size: 25px;
+
+}
+.siguenos-turismo360 {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+.sobrenosotros-turismo360 {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .titulo-footer-turismo360 {

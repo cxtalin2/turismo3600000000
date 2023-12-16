@@ -9972,3 +9972,15 @@ h6,
   list-style-type: none;
 }
 
+
+.footer-turismo360 {
+  background-color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 7.5rem;
+  padding-right: 5rem;
+  background-image: url(assets/images/fondodepantallaFooter.jpeg);
+
+}

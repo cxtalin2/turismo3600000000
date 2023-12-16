@@ -3,7 +3,7 @@ export interface Plan{
     name: string;
     description: string;
     location: string;
-    price: string;
+    price: number;
     type: string;
     category: string;
     urlImage: string;

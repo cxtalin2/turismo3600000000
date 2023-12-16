@@ -6,4 +6,5 @@ export interface Reservas {
     date: string;
     quantity: string;
     notes: string;
+    total: number;
 }

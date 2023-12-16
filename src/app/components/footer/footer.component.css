@@ -4,8 +4,9 @@
     padding-bottom: 2rem;
     display: flex;
     align-items: center;
-    padding-left: 5rem;
+    padding-left: 7.5rem;
     padding-right: 5rem;
+    background-image: url(/src/assets/images/);
 }
 .display-footer-turismo360 {
     text-align: center;
@@ -36,5 +37,15 @@
 }
 
 .titulo-footer-turismo360 {
+    color: black;
+}
+.iconos-footer {
+    display: flex;
+    justify-content: space-around;
+}
+.sobrenosotros-footer {
+        display: grid;
+}
+.politicadeprivacidad-turismo360 {
     color: black;
 }

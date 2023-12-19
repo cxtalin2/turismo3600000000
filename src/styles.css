@@ -9985,3 +9985,9 @@ h6,
   background-image: url(assets/images/fondodepantallaFooter.jpeg);
 
 }
+
+.ver-mas-planes {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}

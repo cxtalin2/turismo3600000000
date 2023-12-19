@@ -19,6 +19,7 @@ import { HeaderAdminComponent } from './components/header-admin/header-admin.com
 import { ActualizarPlanComponent } from './pages/actualizar-plan/actualizar-plan.component';
 import { ListarReservasComponent } from './pages/listar-reservas/listar-reservas.component';
 import { ActividadesComponent } from './pages/actividades/actividades.component';
+import { PlanesComponent } from './pages/planes/planes.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ActividadesComponent } from './pages/actividades/actividades.component'
     HeaderAdminComponent,
     ActualizarPlanComponent,
     ListarReservasComponent,
-    ActividadesComponent
+    ActividadesComponent,
+    PlanesComponent
   ],
   imports: [
     BrowserModule,

@@ -24,7 +24,8 @@ export class ActualizarPlanComponent {
     location: ['Bogotá'],
     price: ['', [Validators.required]],
     category: [''],
-    urlImage: ['']
+    urlImage: [''],
+    highlight: [ false ]
   })
   plan!: Plan
   planId!: string
@@ -46,7 +47,7 @@ export class ActualizarPlanComponent {
           console.log( data );
           this.plan = data
 
-          const {name, description, location, price, category, urlImage} = data
+          const {name, description, location, price, category, urlImage, highlight} = data
 
         this.planesForm.setValue({
           name,
@@ -54,7 +55,8 @@ export class ActualizarPlanComponent {
           location,
           price,
           category,
-          urlImage
+          urlImage,
+          highlight
         })
         })
       });

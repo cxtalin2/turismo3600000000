@@ -71,7 +71,14 @@
       [disabled]="planesForm.invalid"
     >Actualizar</button>
   </div>
-
+  <div class="field">
+    <label for="highlight">Destacar</label>
+    <select formControlName="highlight" id="highlight" class="input-field">
+      <option value="" selected> Seleccione... </option>
+      <option value="true"> Si </option>
+      <option value="false"> No </option>
+    </select>
+  </div>
   <div class="errors">
     <h3 class="title-errors">Errors</h3>
     <!-- <pre class="error">{{ loginForm.get( 'email' )?.errors | json }}</pre>

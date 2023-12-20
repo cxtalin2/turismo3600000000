@@ -8,4 +8,5 @@ export interface Plan{
     category: string;
     urlImage: string;
     userId: string;
+    highlight: boolean;
 }

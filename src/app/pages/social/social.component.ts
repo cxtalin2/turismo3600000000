@@ -28,7 +28,8 @@ export class SocialComponent implements OnInit {
   ngOnInit() {
     this.planesService.obtenerPlanes().subscribe((data) => {
       console.log(data);
-      this.planes = data.data;
+      
+      this.planes = data.data.filter(plan => plan?.highlight == true ) ; //Filtra últimos seís planes.
     });
   }
 

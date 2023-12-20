@@ -21,7 +21,8 @@ export class AgregarPlanesComponent {
     location: ['Bogotá'],
     price: ['', [Validators.required]],
     category: [''],
-    urlImage: ['']
+    urlImage: [''],
+    highlight: [ false ]
   })
 
   constructor( private fb: FormBuilder, private planesService: PlanesService, private router: Router) {}

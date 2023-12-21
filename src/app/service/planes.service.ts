@@ -14,7 +14,9 @@ export class PlanesService {
 
   token: string
   headers: HttpHeaders
-  
+  plan: any;
+  previousPlan: any;
+  nextPlan: any;
 
   constructor( private http:HttpClient ) {
     const token = localStorage.getItem('token')
@@ -29,18 +31,29 @@ export class PlanesService {
     return this.http.get<ResponsePlanes>( this.BASE_URL+'/planes/' + currentPage )
   }
 
+  // getPlanById( id: string ) {
+
+  //   return this.http.get<ResponsePlan>( `${this.BASE_URL}/planes/${ id }`)
+  //     .pipe(
+  //       tap( data => {
+  //         console.log( data );
+
+  //         return data;
+  //       }),
+  //       map( plan => plan.data )
+  //     );
+  // }
   getPlanById( id: string ) {
-
-    return this.http.get<ResponsePlan>( `${this.BASE_URL}/planes/${ id }`)
-      .pipe(
-        tap( data => {
-          console.log( data );
-
-          return data;
-        }),
-        map( plan => plan.data )
-      );
+    return this.http.get<any>(`${ this.BASE_URL }/planes/one/${ id }`).pipe(
+            tap( data => {
+              console.log( data );
+    
+              return data;
+            }),
+            map( plan => plan.data )
+          );
   }
+
 
   crearPlan( nuevoPlan: Plan ) {
     return this.http.post(this.BASE_URL+'/planes', nuevoPlan, { headers: this.headers })

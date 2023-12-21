@@ -29,6 +29,13 @@ export class PlanesService {
 
   obtenerPlanesPaginados( currentPage: number ) {
     return this.http.get<ResponsePlanes>( this.BASE_URL+'/planes/' + currentPage )
+      .pipe(
+        tap( data => {
+          console.log( data );
+          return data;
+        }),
+        map( data => data )
+      )
   }
 
   // getPlanById( id: string ) {
@@ -50,7 +57,7 @@ export class PlanesService {
 
               return data;
             }),
-            map( plan => plan.data )
+            map( data => data )
           );
   }
 

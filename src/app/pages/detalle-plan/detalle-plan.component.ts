@@ -88,7 +88,9 @@ export class DetallePlanComponent {
   loadArticle( id: string ): void {
     this.planesService.getPlanById(id).subscribe(( data ) => {
       console.log( data );
-      this.planActual = data;
+      this.planActual = data.data;
+      this.previousPlan = data.planAnterior;
+      this.nextPlan = data.planSiguiente;
     })
   }
 

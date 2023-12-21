@@ -1,0 +1,39 @@
+.imagen-monserrate {
+  width: 24rem;
+  margin: 0 2rem 0 0;
+}
+
+.cuadro-monserrate {
+  display: flex;
+  align-items: left;
+  margin: 0 10rem 0 10rem;
+  padding: 4rem;
+}
+.reservar-monserrate{
+  background-color: #7AB730 !important;
+}
+.reserva-ahora-fondo-monserrate {
+  background-color: #7AB730 !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  margin-bottom: 2rem;
+
+}
+
+.reserva-ahora-monserrate {
+  color: white;
+  font-size: 23px;
+}
+form.ng-untouched.ng-pristine.ng-invalid {
+  margin-top: 2rem;
+}
+
+.menu-planes {
+  display: flex;
+  align-items: left;
+  margin: 0 10rem 0 10rem;
+  padding: 1rem 4rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}

@@ -1,6 +1,25 @@
 <!-- <app-actividades [plan] = "plan"></app-actividades> -->
 
+<div class="menu-planes">
+  <div *ngIf="previousPlan">
+    <a
+      class="btn btn-primary"
+      routerLink="/plan/{{ previousPlan._id }}"
+      (click)="logRouterLink('/plan/{{ previousPlan._id }}')"
+    >Anterior</a>
+  </div>
+  <div *ngIf="nextPlan">
+    <a
+      class="btn btn-primary"
+      routerLink="/plan/{{ nextPlan._id }}"
+      (click)="logRouterLink('/plan/{{ nextPlan._id }}')"
+    >Siguiente</a>
+  </div>
+</div>
+
 <div class="cuadro-monserrate">
+
+    <!-- Enlaces a artículos anterior y siguiente -->
 
     <div class="imagen-monserrate">
         <img class="imagen-monserrate" [src]="planActual?.urlImage" alt="">

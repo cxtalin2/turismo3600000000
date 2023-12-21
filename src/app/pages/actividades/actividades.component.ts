@@ -19,7 +19,7 @@ export class ActividadesComponent {
   
 
   planes!: Plan[];
-
+  currentPage: number = 1
   reservasForm: FormGroup = this.fb.group({
     name: ['', []],
     email: [''],

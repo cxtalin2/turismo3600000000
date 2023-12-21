@@ -13,7 +13,7 @@ import Swal from 'sweetalert2';
 })
 export class SocialComponent implements OnInit {
   planes!: Plan[];
-
+  currentPage: number = 1
   reservasForm: FormGroup = this.fb.group({
     name: ['', []],
     email: [''],
@@ -26,7 +26,7 @@ export class SocialComponent implements OnInit {
   constructor(private planesService: PlanesService, private router: Router, private fb: FormBuilder, private reservasService: ReservasService) {}
 
   ngOnInit() {
-    this.planesService.obtenerPlanes().subscribe((data) => {
+    this.planesService.obtenerPlanes( ).subscribe((data) => {
       console.log(data);
       
       this.planes = data.data.filter(plan => plan?.highlight == true ) ; //Filtra últimos seís planes.

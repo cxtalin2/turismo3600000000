@@ -11,12 +11,13 @@ import Swal from 'sweetalert2';
 })
 export class ListarPlanesComponent {
   planes!: Plan[]
+  currentPage: number = 1
   constructor( private planesService: PlanesService, private router: Router ) {}
   ngOnInit() {
     this.cargarDatos()
   }
   cargarDatos() {
-    this.planesService.obtenerPlanes().subscribe(( data ) => { 
+    this.planesService.obtenerPlanesPaginados( this.currentPage ).subscribe(( data ) => { 
     console.log(data);
     this.planes = data.data;
   })}

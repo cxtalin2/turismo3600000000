@@ -14,6 +14,7 @@ export class PlanesService {
 
   token: string
   headers: HttpHeaders
+  
 
   constructor( private http:HttpClient ) {
     const token = localStorage.getItem('token')
@@ -21,7 +22,11 @@ export class PlanesService {
     this.headers = new HttpHeaders().set('X-Token', this.token)
   }
   obtenerPlanes() {
-    return this.http.get<ResponsePlanes>( this.BASE_URL+'/planes' )
+    return this.http.get<ResponsePlanes>( this.BASE_URL+'/planes/' )
+  }
+  
+  obtenerPlanesPaginados( currentPage: number ) {
+    return this.http.get<ResponsePlanes>( this.BASE_URL+'/planes/' + currentPage )
   }
 
   getPlanById( id: string ) {

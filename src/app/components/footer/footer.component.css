@@ -12,23 +12,23 @@
 }
 
 .slogan-turismo360 {
-    color: black;
+    color: white;
     font-size: 25px;
 
 }
 .siguenos-turismo360 {
-    color: black;
+    color: white;
     font-size: 25px;
     font-weight: bold;
 }
 .sobrenosotros-turismo360 {
-    color: black;
+    color: white;
     font-size: 25px;
     font-weight: bold;
 }
 
 .titulo-footer-turismo360 {
-    color: black;
+    color: white;
 }
 .iconos-footer {
     display: flex;
@@ -41,5 +41,5 @@
         display: grid;
 }
 .politicadeprivacidad-turismo360 {
-    color: black;
+    color: white;
 }

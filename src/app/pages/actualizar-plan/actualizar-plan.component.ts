@@ -47,7 +47,7 @@ export class ActualizarPlanComponent {
           console.log( data );
           this.plan = data
 
-          const {name, description, location, price, category, urlImage, highlight} = data
+          const {name, description, location, price, category, urlImage, highlight} = data.data
 
         this.planesForm.setValue({
           name,

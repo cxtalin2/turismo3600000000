@@ -50,4 +50,19 @@ export class ListarPlanesComponent {
   editar(id: string) {
     this.router.navigate(["actualizar-plan", id])
   }
+  nextPage(): void {
+    this.currentPage++;
+    this.cargarDatos();
+  }
+
+  prevPage(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.cargarDatos();
+    }
+  }
+
+  viewDetails(articleId: string): void {
+    this.router.navigate(['article', articleId]);
+  }
 }

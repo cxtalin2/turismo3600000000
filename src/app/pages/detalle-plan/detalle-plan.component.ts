@@ -13,13 +13,13 @@ import Swal from 'sweetalert2';
   styleUrls: ['./detalle-plan.component.css']
 })
 export class DetallePlanComponent {
-  plan!: any;
+  planActual!: any;
   descuento:number = 0.1
   cantidadPersonas:number = 0;
   total = 0;
   previousPlan: any;
   nextPlan: any;
-  
+
 
   planes!: Plan[];
   currentPage: number = 1
@@ -27,13 +27,21 @@ export class DetallePlanComponent {
     name: ['', []],
     email: [''],
     plan: [''],
-    date: [''], 
+    date: [''],
     quantity: [''],
     notes: [''],
     total: [ 0 ]
   })
 
-  constructor(private planesService: PlanesService, private router: Router, private fb: FormBuilder, private reservasService: ReservasService, private activatedRoute: ActivatedRoute) {}
+  constructor(
+    private planesService: PlanesService,
+    private router: Router,
+    private fb: FormBuilder,
+    private reservasService: ReservasService,
+    private activatedRoute: ActivatedRoute
+  ) {
+    console.log( 'DetallePlanComponent' );
+  }
 
 
   // ngOnInit() {
@@ -54,9 +62,10 @@ export class DetallePlanComponent {
   // }
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
-      const articleId = params['id'];
+      const planId = params[ 'id' ];
+      console.log( planId );
 
-      this.loadArticle(articleId);
+      this.loadArticle(planId);
     });
   }
 
@@ -70,7 +79,10 @@ export class DetallePlanComponent {
   // );
 
   loadArticle( id: string ): void {
-    
+    this.planesService.getPlanById(id).subscribe(( data ) => {
+      console.log( data );
+      this.planActual = data;
+    })
   }
 
   logRouterLink(route: string): void {
@@ -99,12 +111,12 @@ export class DetallePlanComponent {
     });
   }
   calculaTotal() {
-    this.total = this.reservasForm.get("quantity")?.value * this.plan?.price!; 
+    this.total = this.reservasForm.get("quantity")?.value * this.planActual?.price!;
     this.reservasForm.setValue({
       name: this.reservasForm.get("name")?.value,
       email: this.reservasForm.get("email")?.value,
       plan: this.reservasForm.get("plan")?.value,
-      date: this.reservasForm.get("date")?.value, 
+      date: this.reservasForm.get("date")?.value,
       quantity: this.reservasForm.get("quantity")?.value,
       notes: this.reservasForm.get("notes")?.value,
       total: this.total

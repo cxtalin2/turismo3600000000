@@ -4,7 +4,7 @@
 <div class="cuadro-monserrate">
 
     <div class="imagen-monserrate">
-        <img class="imagen-monserrate" [src]="plan?.urlImage" alt="">
+        <img class="imagen-monserrate" [src]="planActual?.urlImage" alt="">
 
         <form [formGroup]="reservasForm" (ngSubmit)="onSubmit()">
             <div class="reserva-ahora-fondo-monserrate">
@@ -12,7 +12,7 @@
                     Reserva ahora
                 </h2>
             </div>
-            
+
             <div class="form-group">
                 <input type="text" class="form-control p-4" placeholder="Tu nombre" required="required" formControlName="name" />
             </div>
@@ -58,15 +58,15 @@
     <div class="actividad-monserrate">
 
         <h1 class="titulo-monserrate">
-            {{plan?.name}}
+            {{planActual?.name}}
         </h1>
 
         <p class="ciudad-monserrate">
-            {{plan?.location}}
+            {{planActual?.location}}
         </p>
 
         <p class="descripcion-monserrate">
-            {{plan?.description}}
+            {{planActual?.description}}
         </p>
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">

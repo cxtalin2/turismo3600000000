@@ -20,13 +20,13 @@ export class PlanesService {
 
   constructor( private http:HttpClient ) {
     const token = localStorage.getItem('token')
-    this.token = token ? token : '' ; 
+    this.token = token ? token : '' ;
     this.headers = new HttpHeaders().set('X-Token', this.token)
   }
   obtenerPlanes() {
-    return this.http.get<ResponsePlanes>( this.BASE_URL+'/planes/' )
+    return this.http.get<any>( this.BASE_URL+'/planes/' )
   }
-  
+
   obtenerPlanesPaginados( currentPage: number ) {
     return this.http.get<ResponsePlanes>( this.BASE_URL+'/planes/' + currentPage )
   }
@@ -47,7 +47,7 @@ export class PlanesService {
     return this.http.get<any>(`${ this.BASE_URL }/planes/one/${ id }`).pipe(
             tap( data => {
               console.log( data );
-    
+
               return data;
             }),
             map( plan => plan.data )

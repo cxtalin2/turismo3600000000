@@ -12,13 +12,13 @@ import Swal from 'sweetalert2';
   styleUrls: ['./social.component.css']
 })
 export class SocialComponent implements OnInit {
-  planes!: Plan[];
+  planes!: any;
   currentPage: number = 1
   reservasForm: FormGroup = this.fb.group({
     name: ['', []],
     email: [''],
     plan: [''],
-    date: [''], 
+    date: [''],
     quantity: [''],
     notes: ['']
   })
@@ -28,8 +28,8 @@ export class SocialComponent implements OnInit {
   ngOnInit() {
     this.planesService.obtenerPlanes( ).subscribe((data) => {
       console.log(data);
-      
-      this.planes = data.data.filter(plan => plan?.highlight == true ) ; //Filtra últimos seís planes.
+
+      this.planes = data.data.filter((plan: any) => plan?.highlight == true ) ; //Filtra últimos seís planes.
     });
   }
 
@@ -56,5 +56,5 @@ export class SocialComponent implements OnInit {
     });
   }
 
-  
+
 }

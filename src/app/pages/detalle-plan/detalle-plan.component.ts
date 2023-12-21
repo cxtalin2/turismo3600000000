@@ -21,7 +21,7 @@ export class DetallePlanComponent {
   nextPlan: any;
 
 
-  planes!: Plan[];
+  planes!: any;
   currentPage: number = 1
   reservasForm: FormGroup = this.fb.group({
     name: ['', []],
@@ -61,12 +61,19 @@ export class DetallePlanComponent {
   //     });
   // }
   ngOnInit(): void {
+
     this.activatedRoute.params.subscribe(params => {
       const planId = params[ 'id' ];
       console.log( planId );
 
       this.loadArticle(planId);
     });
+
+    this.planesService.obtenerPlanes().subscribe( planes => {
+      console.log(planes);
+
+      this.planes = planes.data;
+    })
   }
 
   // .subscribe(

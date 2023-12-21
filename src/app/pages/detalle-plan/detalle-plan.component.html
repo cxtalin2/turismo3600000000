@@ -1,6 +1,5 @@
 <!-- <app-actividades [plan] = "plan"></app-actividades> -->
 
-
 <div class="cuadro-monserrate">
 
     <div class="imagen-monserrate">
@@ -114,22 +113,7 @@
 
     </div>
 
-
-
 </div>
-
-<div *ngIf="previousPlan">
-    <a
-      routerLink="/plan/{{ previousPlan._id }}"
-      (click)="logRouterLink('/plan/{{ previousPlan._id }}')"
-    >Artículo Anterior</a>
-  </div>
-  <div *ngIf="nextPlan">
-    <a
-      routerLink="/plan/{{ nextPlan._id }}"
-      (click)="logRouterLink('/plan/{{ nextPlan._id }}')"
-    >Artículo Siguiente</a>
-  </div>
 
 
 

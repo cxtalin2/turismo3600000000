@@ -1,0 +1,14 @@
+.menu-planes {
+    display: flex;
+    align-items: left;
+    margin: 0 10rem 0 10rem;
+    padding: 1rem 4rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+.boton {
+    background-color: #7AB730;
+   
+}
